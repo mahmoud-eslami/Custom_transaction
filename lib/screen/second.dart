@@ -28,7 +28,7 @@ class StaggeredPageAnimation extends StatelessWidget {
               endDy: 0,
               startInterval: 0,
               endInterval: .25,
-              curvesAnimation: Curves.linear,
+              curvesAnimation: Curves.easeInOut,
               transactionAnimation: transactionAnimation,
               mainChild: Container(
                 width: double.infinity,
@@ -54,7 +54,7 @@ class StaggeredPageAnimation extends StatelessWidget {
               endDy: 0,
               startInterval: 0.25,
               endInterval: .5,
-              curvesAnimation: Curves.linear,
+              curvesAnimation: Curves.easeInOut,
               transactionAnimation: transactionAnimation,
               mainChild: Container(
                   width: double.infinity,
@@ -80,7 +80,7 @@ class StaggeredPageAnimation extends StatelessWidget {
               endDy: 0,
               startInterval: 0.5,
               endInterval: .75,
-              curvesAnimation: Curves.linear,
+              curvesAnimation: Curves.easeInOut,
               transactionAnimation: transactionAnimation,
               mainChild: Container(
                   width: double.infinity,
@@ -95,7 +95,15 @@ class StaggeredPageAnimation extends StatelessWidget {
                             decoration: InputDecoration(
                               errorMaxLines: 1,
                               helperMaxLines: 1,
+                              labelText: 'Username',
+                              labelStyle: TextStyle(color: Colors.amber.withOpacity(.5),fontSize: 12),
                               enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.amber),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(30),
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.amber),
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(30),
@@ -104,14 +112,24 @@ class StaggeredPageAnimation extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         SizedBox(
                           height: 50,
                           child: TextFormField(
                             decoration: InputDecoration(
                               errorMaxLines: 1,
                               helperMaxLines: 1,
+                              labelText: 'Password',
+                              labelStyle: TextStyle(color: Colors.amber.withOpacity(.5),fontSize: 12),
                               enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.amber),
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(30),
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.amber),
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(30),
@@ -134,7 +152,7 @@ class StaggeredPageAnimation extends StatelessWidget {
               endDy: 0,
               startInterval: 0.75,
               endInterval: 1,
-              curvesAnimation: Curves.linear,
+              curvesAnimation: Curves.easeInOut,
               transactionAnimation: transactionAnimation,
               mainChild: Container(
                 width: double.infinity,
