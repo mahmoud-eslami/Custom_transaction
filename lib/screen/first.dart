@@ -13,10 +13,21 @@ class First extends StatelessWidget {
                 pageBuilder: (context, animation, secondaryAnimation) {
                   return StaggeredPageAnimation(transactionAnimation: animation);
                 },
-                transitionDuration: Duration(seconds: 1)),
+                transitionDuration: Duration(milliseconds: 1500)),
           );
         },
         child: Icon(Icons.add),
+      ),
+      body: Center(
+        child: Center(
+          child: Text(
+            'Ummmmmmm!',
+            style: TextStyle(
+                color: Colors.amber,
+                fontSize: 40,
+                fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }

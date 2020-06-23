@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Custom Transaction',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.amber,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: First(),
