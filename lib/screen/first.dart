@@ -8,7 +8,13 @@ class First extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Second()));
+            context,
+            PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) {
+                  return StaggeredPageAnimation(transactionAnimation: animation);
+                },
+                transitionDuration: Duration(seconds: 1)),
+          );
         },
         child: Icon(Icons.add),
       ),
