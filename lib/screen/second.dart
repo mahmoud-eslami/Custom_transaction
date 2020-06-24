@@ -146,8 +146,8 @@ class StaggeredPageAnimation extends StatelessWidget {
           Expanded(
             flex: 1,
             child: MySlideAnimation(
-              beginDx: -1,
-              beginDy: 0,
+              beginDx: 0,
+              beginDy: 4,
               endDx: 0,
               endDy: 0,
               startInterval: 0.75,
