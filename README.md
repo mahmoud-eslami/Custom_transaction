@@ -3,13 +3,38 @@
 ##### Make Custom Transition in flutter
 
 using :
-$$
-PageRouteBuilder()
-$$
+
+```dart
+PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) {
+        return StaggeredPageAnimation(transactionAnimation: animation);
+      },
+      transitionDuration: Duration(milliseconds: 1500)),
+);
+```
+
 for navigation and use :
-$$
-AnimatedBuilder() ,SliderTransition()
-$$
+
+```dart
+AnimatedBuilder(
+  animation: transactionAnimation,
+  builder: (context, child) {
+    return SlideTransition(
+      position: Tween<Offset>(
+              begin: Offset(beginDx, beginDy), end: Offset(endDx, endDy))
+          .animate(
+        CurvedAnimation(
+            curve: Interval(startInterval, endInterval,
+                curve: curvesAnimation),
+            parent: transactionAnimation),
+      ),
+      child: child,
+    );
+  },
+  child: mainChild,
+);
+```
+
 for handle animation .
 
 ## Show Case :
